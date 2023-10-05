@@ -45,20 +45,21 @@ navlinks.addEventListener("click", function () {
 })
 
 
-let counter = 1;
+let count = 1;
 
 const counterValue = document.getElementById('value');
 const incrementBtn = document.getElementById('incre');
 const decrementBtn = document.getElementById('decre');
 
-// To increment the value of counter
-incrementBtn.addEventListener('click', () => {
-    counter++;
-    counterValue.innerHTML = counter;
-});
+incrementBtn.addEventListener("click", function () {
+    count++;
+    counterValue.innerHTML = count;
+  });
+  decrementBtn.addEventListener("click", function () {
+    if (count > 1) {
+      count--;
+      counterValue.innerHTML = count;
+    }
+  });
 
-// To decrement the value of counter
-decrementBtn.addEventListener('click', () => {
-    counter--;
-    counterValue.innerHTML = counter;
-});
+  
